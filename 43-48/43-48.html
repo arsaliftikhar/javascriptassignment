@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>43-48</title>
+</head>
+<script>
+//question 1
+    function showAlert() {
+        alert('You click on link');
+    }
+//question 2
+    function imgAlert() {
+        alert('Congrats you purchase this mobile');
+    }
+//question 3
+function deleteRow() {
+
+    document.getElementById('myTable').deleteRow(1);
+}
+//question 4
+function over() {
+    document.getElementById('image').src='2.png';
+}
+function out() {
+    document.getElementById('image').src='1.png';
+}
+//question 5
+
+    var i=0;
+    function increase()
+    {
+        i=i+1;
+        document.querySelector('#counter').innerHTML=i;
+    }
+    function decrease()
+    {
+        i=i-1;
+        document.querySelector('#counter').innerHTML=i;
+    }
+
+
+</script>
+<body>
+<style>
+    .images
+    {
+        height: 200px;
+        width: 500px;
+
+    }
+    .images img
+    {
+        float: left;
+        height: 200px;
+        width: 150px;
+        cursor: pointer;
+    }
+</style>
+<a href="#" onclick="showAlert()">Click to show alert</a>
+<br>
+<div class="images">
+    <img onclick="imgAlert()" src="1.png" alt="">
+    <img onclick="imgAlert()" src="2.png" alt="">
+    <img onclick="imgAlert()" src="3.png" alt="">
+</div>
+<br>
+<h2>Student Record Table</h2>
+<br>
+<table id="myTable">
+    <tr>
+        <th>Index</th>
+        <th>Name</th>
+        <th>Class</th>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>Jhone</td>
+        <td>10</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Doe</td>
+        <td>9</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Mark</td>
+        <td>10</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>James</td>
+        <td>8</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+</table>
+<br>
+<h2>Image change on mouse over and out</h2>
+<img id="image" height="200" width="200" onmouseout="out()" onmouseover="over()" src="1.png" alt="">
+<br>
+<h2>Counter</h2>
+<br>
+<h3 id="counter">0</h3>
+<br>
+<button onclick="increase()">Increase</button>
+<button onclick="decrease()">Decrease</button>
+<h1>Chapter 43-48</h1>
+</body>
+</html>

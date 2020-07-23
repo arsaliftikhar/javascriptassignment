@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>49-52</title>
+</head>
+<script>
+
+    //Question 1
+function showData() {
+    var fname=document.getElementById('fname').value;
+    var lname=document.getElementById('lname').value;
+    var email=document.getElementById('email').value;
+    var data='First Name: '+fname+'<br>Last Name: '+lname+'<br>Email: '+email;
+    document.getElementById('dataShow').innerHTML=data;
+}
+    //Question 2
+function readMore() {
+    var para=document.getElementById('para');
+    var morePara='Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolor earum exercitationem impedit iste iusto magnam quam repudiandae temporibus voluptatibus. Architecto commodi dolorum incidunt ipsum laudantium quae, recusandae sequi. Quas.';
+    para.innerHTML=morePara+morePara;
+}
+    //Question 3
+    //not complete because same as toodo app
+</script>
+<body>
+<p id="dataShow">
+
+</p>
+<br>
+<h2>Sign Up Form</h2>
+<br>
+<label for="fname">Enter First Name</label>
+<br>
+<input type="text" id="fname">
+<br>
+<label for="lname">Enter Last Name</label>
+<br>
+<input type="text" id="lname">
+<br>
+<label for="email">Enter Email</label>
+<br>
+<input type="email" id="email">
+<br>
+<button onclick="showData()">Submit</button>
+<br>
+<br>
+<div style="border: 1px solid black;width: 300px;text-align: justify">
+<p id="para">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolor earum exercitationem impedit iste iusto magnam quam repudiandae temporibus voluptatibus. Architecto commodi dolorum incidunt ipsum laudantium quae, recusandae sequi. Quas.
+</p>
+    <button onclick="readMore()">Read more</button>
+</div>
+
+<h1>Chapter 49-52</h1>
+</body>
+</html>

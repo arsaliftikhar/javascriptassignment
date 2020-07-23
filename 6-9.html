@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6-9</title>
+</head>
+
+<script>
+//question 1
+    var a=10;
+
+    document.write('Result <br>The vaalue of a is: '+a+'<br>......................................');
+
+    var a= ++a;
+    document.write('<br><br>The value of ++a is: '+a+'<br>Now the value of a is: '+a);
+
+    var a=a++;
+    document.write('<br><br>The value of a++ is: '+a+'<br>Now the value of a is: '+a);
+
+    var a=--a;
+    document.write('<br><br>The value of --a is: '+a+'<br>Now the value of a is: '+a)
+
+    var a=a--;
+    document.write('<br><br>The value of a-- is: '+a+'<br>Now the value of a is: '+a)
+
+
+//question 2
+    var a=2,b=1;
+    var result =--a - --b + ++b + b--;
+    document.write('<br><br><br><br>Result is: '+result+'<br><br><br><br>');
+
+//question 3
+    var greet=prompt('Your name');
+    document.write('Welcome: '+greet+'<br><br><br><br>');
+
+//question 4
+    var tableNumber;
+    var tableNumber=prompt('Enter Table Number');
+    if (tableNumber=='')
+    {
+        var tableNumber=5;
+        var tableLength=10;
+
+        document.write('Table of '+tableNumber+'<br>');
+        for (var i=1;i<=tableLength;i++)
+        {
+            document.write(tableNumber+'x'+i+'='+tableNumber*i+'<br>');
+        }
+    }
+   else
+    {
+
+        var tableLength=10;
+
+        document.write('Table of '+tableNumber+'<br>');
+        for (var i=1;i<=tableLength;i++)
+        {
+            document.write(tableNumber+'x'+i+'='+tableNumber*i+'<br>');
+        }
+
+    }
+
+
+//question 5
+
+
+    var english=prompt('Enter English Marks');
+    var math=prompt('Enter math Marks');
+    var urdu=prompt('Enter urdu Marks');
+    var subjectTotal=100;
+    var engper=(english/subjectTotal)*100;
+    var mathper=(math/subjectTotal)*100;
+    var urduper=(urdu/subjectTotal)*100;
+    var obtain=parseInt(english)+parseInt(math)+parseInt(urdu);
+    var percentage=(obtain/300)*100;
+
+
+
+
+
+
+</script>
+
+<body>
+<table>
+    <tr>
+        <th>Subject</th>
+        <th>Total Marks</th>
+        <th>Obtain Marks</th>
+        <th>Percentage</th>
+    </tr>
+    <tr>
+        <td>English</td>
+        <td><script>document.write(subjectTotal)</script></td>
+        <td><script>document.write(english)</script></td>
+        <td><script>document.write(engper+'%')</script></td>
+    </tr>
+    <tr>
+        <td>Math</td>
+        <td><script>document.write(subjectTotal)</script></td>
+        <td><script>document.write(math)</script></td>
+        <td><script>document.write(mathper+'%')</script></td>
+    </tr>
+    <tr>
+        <td>Urdu</td>
+        <td><script>document.write(subjectTotal)</script></td>
+        <td><script>document.write(urdu)</script></td>
+        <td><script>document.write(urduper+'%')</script></td>
+    </tr>
+    <tr>
+        <td colspan="1"></td>
+        <td><b><script>document.write(subjectTotal*3)</script></b></td>
+        <td><b><script>document.write(obtain)</script></b></td>
+        <td><b><script>document.write(percentage+'%')</script></b></td>
+    </tr>
+</table>
+
+
+<h1>Chapter 6-9</h1>
+</body>
+</html>

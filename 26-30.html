@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>26-30</title>
+</head>
+<script>
+//Question 1
+    var getNumber=prompt('Enter positive number');
+    var roundOff= Math.round(getNumber);
+    var floor= Math.floor(getNumber);
+    var ceil= Math.ceil(getNumber);
+    document.write('Number: '+getNumber+'<br>Round Off Value: '+roundOff+'<br>Floor Value: '+floor+'<br>Ceil Value: '+ceil);
+
+//Question 2
+    document.write('<br><br><br><br><br>');
+var getNegativeNumber=prompt('Enter negative number');
+var roundOffNegativeNumber= Math.round(getNegativeNumber);
+var floorNegativeNumber= Math.floor(getNegativeNumber);
+var ceilNegativeNumber= Math.ceil(getNegativeNumber);
+document.write('Number: '+getNegativeNumber+'<br>Round Off Value: '+roundOffNegativeNumber+'<br>Floor Value: '+floorNegativeNumber+'<br>Ceil Value: '+ceilNegativeNumber);
+
+
+//Question 3
+    document.write('<br><br><br><br><br>');
+    var getValue=prompt('Enter value to get absolute');
+    var absouluteValue=Math.abs(getValue);
+    document.write('Get Value is: '+getValue+'<br>Absolute Value is: '+absouluteValue);
+
+//Question 4
+    document.write('<br><br><br><br><br>');
+    var randomGenerate=Math.random();
+    var fixRandom=(randomGenerate*6)+1;
+    var result=parseInt(fixRandom);
+    document.write(result);
+
+//Question 6
+    document.write('<br><br><br><br><br>');
+    var rand=Math.random();
+    var finalResult=(rand*2)+1;
+    var result=parseInt(finalResult);
+    document.write(result);
+
+//Question 7
+    document.write('<br><br><br><br><br>');
+    var randomNumber=Math.random();
+    var finalRandomNumber=(randomNumber*1)*100;
+    var fResult=parseInt(finalRandomNumber);
+    document.write('Number randomly generate between 1 to 100 = '+fResult);
+
+//Question 7
+    document.write('<br><br><br><br><br>');
+    var weight=prompt('Enter your weight');
+    document.write('Weight of user is '+parseInt(weight)+' Kilograms');
+
+//Question 8
+    document.write('<br><br><br><br><br>');
+    var randomNum=Math.random();
+    var frandomNum=parseInt((randomNum*1)*10);
+    var luckyNumberInput=prompt('Enter number between 1 to 10 to check your luck');
+    if (luckyNumberInput==frandomNum)
+    {
+        alert('Congrats!');
+    }
+    else
+    {
+        alert('Sorry try again')
+    }
+
+
+</script>
+<body>
+<br>
+<br>
+<h1>Chapter 26-30</h1>
+</body>
+</html>

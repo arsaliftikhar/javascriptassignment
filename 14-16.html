@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>14-16</title>
+</head>
+
+<script>
+    //question 1
+    var students = ['','',''];
+
+    //question 2
+    var student={
+        firstName:'',
+        lastName:'',
+        className:''
+    };
+
+    //question 3
+    var studentName=['ali','ahmad','arsal'];
+    console.log(studentName);
+
+    //question 4
+    var numbers=[1,2,3,4,5,6,7,8,9];
+    console.log(numbers);
+
+
+    //question 5
+
+    var boolArray = [true,false];
+    console.log(boolArray);
+
+
+    //question 7
+    var education=['SSC','HSC','BCS','BS','B.COM','MS','M.Phil','Phd'];
+    for (var i=0;i<education.length;i++)
+    {
+        document.write(i+1+') '+education[i]+'<br>');
+    }
+
+
+
+    document.write('<br><br><br><br><br>');
+    //question 8
+    var std=['ali','ahmad','arsal','hassan'];
+    var marks=[320,230,480,490];
+    var total=500;
+
+    for (var i = 0;i<std.length;i++)
+    {
+        document.write('Score of '+std[i]+' is'+marks[i]+' .Percentage:'+(marks[i]/total)*100+'%<br>');
+    }
+
+
+
+    document.write('<br><br><br><br><br>');
+    //question 9
+    var colors =['red','green','blue','pink','white','yellow'];
+    document.write('<b>Colors: </b>'+colors);
+
+    //a
+    var userColorInput= prompt('Enter color to add in beginning of array');
+    colors.unshift(userColorInput);
+    document.write('<b><br>User Enter Color At Beginning: </b>'+colors);
+
+    //b
+    var userColorInput= prompt('Enter color to add in end of array');
+    colors.push(userColorInput);
+    document.write('<b><br>User Enter Color At End: </b>'+colors);
+
+    //c
+    var userColorInput= prompt('Enter one more color to add in beginning of array');
+    colors.unshift(userColorInput);
+    var userColorInput= prompt('Enter one more again color to add in beginning of array');
+    colors.unshift(userColorInput);
+    document.write('<b><br>User Enter More 2 Colors At Beginning: </b>'+colors);
+
+    //d
+    colors.shift();
+    document.write('<b><br>User Delete First Color: </b>'+colors);
+
+    //e
+    colors.pop();
+    document.write('<b><br>User Delete Last Color: </b>'+colors);
+
+    //f
+    var userInputIndex=prompt('Enter Index Number to add color');
+    var userColorInput= prompt('Enter color to add on index');
+
+    colors.splice(userInputIndex,0,userColorInput);
+    document.write('<b><br>User Enter Color Index: </b>'+userInputIndex);
+    document.write('<b><br>User Enter Color At specific Index: </b>'+colors);
+
+
+    //g
+    var userInputIndex=prompt('Enter Index Number to delete color');
+    var userColorQuantity= prompt('Enter how many colors you want to delete');
+
+    colors.splice(userInputIndex,userColorQuantity);
+    document.write('<b><br>User Enter Color Index to remove: </b>'+userInputIndex);
+    document.write('<b><br>User remove total colors: </b>'+userColorQuantity);
+    document.write('<b><br>After remove final array: </b>'+colors);
+
+    document.write('<br><br><br><br><br>');
+    //question 10
+    var studentMarks=[];
+    for (var i = 1; i <= 5; i++)
+    {
+        var enterMarks=prompt('Enter subject '+i+' marks');
+        studentMarks.push(enterMarks);
+    }
+     var sortedMarks=  studentMarks.sort(function(a, b){return a-b});
+     document.write('<b>Sorted Array: </b>'+sortedMarks);
+
+
+
+    document.write('<br><br><br><br><br>');
+    //question 11
+    var cities=['Karachi','Lahore','Islamabad','Quetta','Peshawar'];
+    var selectedCities=cities.slice(2,4);
+    document.write('<b>Cities: </b>'+cities+'<br><b>Selected Cities: </b>'+selectedCities);
+
+
+
+    document.write('<br><br><br><br><br>');
+    //question 12
+    var string=['This','is','my','string'];
+     var join=   string.join(' ');
+        document.write(join);
+
+    document.write('<br><br><br><br><br>');
+    //question 13
+    var devices=['keyboard','mouse','printer','moniter'];
+    var deviceOut=devices.shift();
+    document.write('<b>Total devices: </b>'+devices+'<br><b>FIFO out devices: </b>'+deviceOut);
+
+
+    document.write('<br><br><br><br><br>');
+    //question 14
+    var devices=['keyboard','mouse','printer','moniter'];
+    var deviceOut=devices.pop();
+    document.write('<b>Total devices: </b>'+devices+'<br><b>LIFO out devices: </b>'+deviceOut);
+
+
+
+    document.write('<br><br><br><br><br>');
+    //question 15
+    var companies=['Apple','Samsung','Motorola','Nokia','Sony','Haier'];
+    document.write('<select>');
+    for (var i=0;i<companies.length;i++)
+    {
+        document.write('<option>'+companies[i]+'</option>');
+    }
+    document.write('</select>');
+
+</script>
+
+
+
+<body>
+<h1>Chapter 14-16</h1>
+
+</body>
+</html>

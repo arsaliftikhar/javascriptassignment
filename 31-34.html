@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>31-34</title>
+</head>
+<script>
+    //Question 1
+    var d=new Date();
+    document.write(d);
+
+
+    //Question 2
+    document.write('<br><br><br><br><br>');
+    var month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+    var n = month[d.getMonth()];
+    document.write(n);
+
+
+    //Question 3
+    document.write('<br><br><br><br><br>');
+    var day= new Array();
+    day[0]='Sun';
+    day[1]='Mon';
+    day[2]='Tue';
+    day[3]='Wed';
+    day[4]='Thu';
+    day[5]='Fri';
+    day[6]='Sat';
+    document.write('Today is '+day[d.getDay()]);
+
+
+    //Question 4
+    document.write('<br><br><br><br><br>');
+    if (day[d.getDay()]==='Sat' || day[d.getDay()]==='Sun')
+    {
+        document.write('Today is fun day');
+    }
+
+    //Question 5
+    document.write('<br><br><br><br><br>');
+    if (d.getMonth() < 16)
+    {
+        document.write('First Fifteen days of month');
+    }
+    else
+    {
+        document.write('Last days of month');
+    }
+
+
+    //Question 6
+    document.write('<br><br><br><br><br>');
+    var today = new Date();
+    var oldDate = new Date("1970-01-01");
+    var diff = (today - oldDate);// milliseconds between now & Christmas
+    var diffMs = Math.round((diff/1000)/60);// milliseconds between now & Christmas
+    document.write('Current Date: '+today+'<br>Elapsed Milliseconds since: '+diffMs);
+
+    //Question 7
+    document.write('<br><br><br><br><br>');
+    var date=new Date();
+    var hours=date.getHours();
+    if (hours<12)
+    {
+        document.write("It's AM");
+    }
+    else
+    {
+        document.write("It's PM");
+    }
+
+    //Question 8
+    document.write('<br><br><br><br><br>');
+    var month=date.getMonth();
+    var year=date.getFullYear();
+    var d = new Date(year, month + 1, 0);
+    document.write(d);
+
+    //Question 9
+    document.write('<br><br><br><br><br>');
+    var oldDate=new Date(2015,5,18);
+    var currentDate= new Date();
+    var totalDays=(currentDate-oldDate)/(1000*60*60*24);
+    document.write(Math.round(totalDays)+' Days have passed since 1st Ramzan,2015');
+
+    //Question 13
+    document.write('<br><br><br><br><br>');
+    var userAgeGet=prompt('Enter your age');
+    var date=new Date();
+    var getYear=date.getFullYear();
+    var calculateYearOfBirth=getYear-userAgeGet;
+    document.write('Your Age is: '+userAgeGet+'<br>Your Birth Of Year Is: '+calculateYearOfBirth);
+
+    //Question 14
+    document.write('<br><br><br><br><br>');
+    var custName=prompt('Enter your name');
+    var currentMonth=date.getMonth();
+    var numUnits=prompt('Number of units');
+    var chargePerUnit=prompt('Charge per unit');
+    var latePaymentSurcharge=prompt('Late Payment Surcharge');
+    var totalBill=numUnits*chargePerUnit;
+    var surchargeTotalBill=parseInt(totalBill)+parseInt(latePaymentSurcharge);
+
+    document.write('Customer Name: '+custName+'<br>Month: '+currentMonth+'<br>Number of units: '+numUnits+'<br>Charges per unit: '+chargePerUnit+'<br><br>');
+    document.write('Net amount payable(within due date): '+totalBill+'<br>Late payment surcharge: '+latePaymentSurcharge+'<br>Gross amount payable (after due date): '+Math.round(surchargeTotalBill));
+
+
+
+</script>
+<body>
+<br>
+<h1>Chapter 31-34</h1>
+</body>
+</html>

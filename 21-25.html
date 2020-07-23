@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>21-25</title>
+</head>
+<script>
+
+    //question 1
+    var firstName=prompt('Enter your first name');
+    var lastName=prompt('Enter your last name');
+    var fullName=firstName +' '+ lastName;
+    document.write('Welcome: '+fullName);
+
+
+    //question 2
+    document.write('<br><br><br><br><br>');
+    var phone=prompt('Enter your favourite phone');
+    document.write('My favourite phone is: '+phone+'<br>String length: '+phone.length);
+
+
+    //question 3
+    document.write('<br><br><br><br><br>');
+    var string='pakistan';
+
+    document.write('String is: '+string+'<br>Index of "n" is: '+string.indexOf('n'));
+
+    //question 4
+    document.write('<br><br><br><br><br>');
+    var string='Hello World';
+    document.write('String: '+string+'<br>Last index of letter "l": '+string.lastIndexOf('l'));
+
+    //question 5
+    document.write('<br><br><br><br><br>');
+    var string='pakistan';
+    document.write('String: '+string+'<br>Character at index 3 : '+string[3]);
+
+
+    //question 6
+    document.write('<br><br><br><br><br>');
+    var firstName= 'Arsal';
+    var lastName=' Iftikhar';
+      document.write('Concat() function use: '+firstName.concat(lastName));
+
+    //question 7
+    document.write('<br><br><br><br><br>');
+    var city='Hyderabad';
+    var otherCity='Islamabad';
+    var replacement=otherCity.slice(0,5)+city.slice(5,9);
+    document.write('City 1: '+city+'<br>City 2: '+otherCity+'<br>After Replacement: '+replacement);
+
+
+    //question 8
+    document.write('<br><br><br><br><br>');
+    var message = 'Ali and Sami are best friends. They play cricket and football together.';
+    document.write('<b>Original String:</b> '+message+'<br> <b>Replace and with &:</b> '+message.split('and').join('&'));
+
+    //question 9
+    document.write('<br><br><br><br><br>');
+    var value='472';
+    document.write('<b>Change string to number: </b>'+parseInt(value));
+
+    //question 10
+    document.write('<br><br><br><br><br>');
+    var userInput=prompt('Enter small letters to convert them uppercase');
+    document.write('<b>Uppercase convert: </b>'+userInput.toUpperCase());
+
+    //question 11
+    document.write('<br><br><br><br><br>');
+    var userInputValue=prompt('Enter letters to convert them in title case');
+    var sliceAllWords=userInputValue.split(" ");
+    document.write('<b>Convert tile case: </b>');
+    for(var i=0;i<sliceAllWords.length;i++)
+    {
+        var firstLetterGet=sliceAllWords[i][0].toUpperCase();
+        var combineWord=firstLetterGet+sliceAllWords[i].slice(1);
+        document.write(combineWord+' ');
+    }
+
+
+    //question 12
+    document.write('<br><br><br><br><br>');
+    var number='35.36';
+    var removed= number.split('.').join("");
+    document.write('<b>Original string: </b>'+number+'<br><b>Remove dot: </b>'+removed);
+
+
+    //question 13
+   /* document.write('<br><br><br><br><br>');
+    var code = prompt('Enter username to check valid or not');
+    for(var i=0;i<=code.length;i++)
+    {
+        var letter= code[i];
+        var letterCode= letter.charCodeAt(0);
+        if (letterCode===33 || letterCode===44 || letterCode===46 || letterCode===64)
+        {
+            alert('Please enter a valid username');
+        }
+    }*/
+
+    //question 14
+    document.write('<br><br><br><br><br>');
+    var enterProduct=prompt('Enter product to check available or not');
+    var products = ['cake','apple pie','cookie','chips','patties'];
+    var lowerCaseChange=enterProduct.toLowerCase();
+
+    var findInArray=products.indexOf(lowerCaseChange);
+    if (findInArray>-1)
+    {
+        alert(enterProduct+' is available at index '+findInArray+' in our bakery');
+    }
+    else
+    {
+        alert('Sorry product is not available in our bakery');
+    }
+
+
+    //question 15
+    document.write('<br><br><br><br><br>');
+
+
+
+    //question 15
+    document.write('<br><br><br><br><br>');
+    var university = 'University of Karachi';
+    document.write(university.split('').join('<br>'));
+
+
+    //question 15
+    document.write('<br><br><br><br><br>');
+    var userInput=prompt('Enter text to get last letter');
+    var result=userInput.length;
+    document.write(userInput[result-1]);
+
+
+    //question 16
+    document.write('<br><br><br><br><br>');
+    var text='the quick brown fox jumps over the lazy dog';
+    document.write(text.split('the').length-1);
+
+
+
+
+</script>
+
+
+
+
+<body>
+<h1>Chapter 21-25</h1>
+</body>
+</html>

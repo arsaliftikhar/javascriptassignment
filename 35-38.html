@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>35-38</title>
+</head>
+<script>
+//Question 1
+    function showDate() {
+        alert(new Date());
+    }
+
+//Question 2
+    function greets() {
+        var firstName=prompt('Enter first name');
+        var lastName=prompt('Enter last name');
+        document.getElementById('greets').innerHTML='Welcome: <br>'+firstName+' '+lastName;
+    }
+
+//Question 3
+    function sum() {
+        var a=prompt('Enter first number');
+        var b=prompt('Enter second number');
+        var sum=parseInt(a)+parseInt(b);
+       document.getElementById('sum').innerHTML=sum;
+
+    }
+
+//Question 4
+        function calculator() {
+            var num1=prompt('Enter first number');
+            var num2=prompt('Enter second number');
+            var operator=prompt('Enter operator');
+            var result=eval(num1+operator+num2);
+            document.getElementById('calculator').innerHTML=result;
+
+        }
+//Question 5
+    function square() {
+        var getArguement=prompt('Enter argument');
+        document.getElementById('square').innerHTML=getArguement*getArguement;
+    }
+//Question 6
+function show() {
+    function factorial(n){
+        let answer = 1;
+        if (n == 0 || n == 1){
+            return answer;
+        }else{
+            for(var i = n; i >= 1; i--){
+                answer = answer * i;
+            }
+            return answer;
+        }
+    }
+    let n = prompt('Enter number to find factorial');
+    answer = factorial(n);
+    console.log("The factorial of " + n + " is " + answer);
+}
+
+
+//Question 7
+function showCount() {
+    var startNum=prompt('Enter starting number');
+    var endNum=prompt('Enter ending number');
+
+        for (var i = startNum;i<=endNum;i++)
+        {
+           console.log(i);
+        }
+
+}
+//Question 8
+    function hypo() {
+        var base=prompt('Enter Base value');
+        var per=prompt('Enter perpendicular value');
+
+        function pythagorean_theorem(base, per) {
+            return Math.sqrt(base*base+per*per);
+        }
+        document.getElementById('hypo').innerHTML='Hypoteneus: '+pythagorean_theorem(base,per);
+
+    }
+//Question 9
+    function area() {
+        var height=prompt('Enter height');
+        var width=prompt('Enter width');
+        document.getElementById('area').innerHTML='Area : '+height*width;
+    }
+//Question 10
+function plm() {
+    var val=prompt('Enter value');
+    var i=1;
+    var arr=[];
+   for (i;i<=val.length;i++)
+   {
+       arr.push(val[i-1]);
+   }
+   arr.reverse();
+   var arrayToString=arr.toString();
+   var string=arrayToString.replace(/,/g,"");
+   if (val===string)
+   {
+       document.getElementById('plm').innerHTML='"'+val+'"'+' is palindrome';
+   }
+   else
+   {
+       document.getElementById('plm').innerHTML='"'+val+'"'+' is not palindrome';
+   }
+}
+//Question 11
+    function capital() {
+        var str=prompt('Enter string');
+        function titleCase(str) {
+            var splitStr = str.toLowerCase().split(' ');
+            for (var i = 0; i < splitStr.length; i++) {
+                splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+            }
+            return splitStr.join(' ');
+        }
+      var printString=titleCase(str);
+        document.getElementById('capital').innerHTML=printString;
+    }
+</script>
+<body>
+<br>
+<button onclick="showDate()">Show Date</button>
+<br>
+<br>
+<h3 id="greets"></h3>
+<button onclick="greets()">Greet User</button>
+<br>
+<br>
+<h3 id="sum"></h3>
+<button onclick="sum()">Sum numbers</button>
+<br>
+<br>
+<h3 id="calculator"></h3>
+<button onclick="calculator()">Calculator</button>
+<br>
+<br>
+<h3 id="square"></h3>
+<button onclick="square()">Square Argument</button>
+<br>
+<br>
+<h3 id="factorial"></h3>
+<button onclick="show()">Factorial of number</button>
+<br>
+<br>
+<h3 id="counting"></h3>
+<button onclick="showCount()">Click to count</button>
+<br>
+<br>
+<h3 id="hypo"></h3>
+<button onclick="hypo()">Click to find hypotenuse</button>
+<br>
+<br>
+<h3 id="area"></h3>
+<button onclick="area()">Click to find area</button>
+<br>
+<br>
+<h3 id="plm"></h3>
+<button onclick="plm()">Click to check palindrome</button>
+<br>
+<br>
+<h3 id="capital"></h3>
+<button onclick="capital()">String every first word capital</button>
+<h1>Chapter 35-38</h1>
+</body>
+</html>

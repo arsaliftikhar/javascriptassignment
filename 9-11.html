@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>9-11</title>
+</head>
+
+
+<script>
+    //question 1
+    var city=prompt('Enter City Name');
+    if (city=='karachi')
+    {
+        document.write('Welcome to the city of lights');
+    }
+    else
+    {
+        document.write('Welcome to the city '+city);
+    }
+
+
+    document.write('<br><br>');
+    //question 2
+    var gender=prompt('Enter Gender');
+    if (gender=='male' || gender=='Male' || gender=='MALE')
+    {
+        document.write('Welcome Sir');
+    }
+    else if (gender=='female' || gender=='Female' || gender=='FEMALE')
+    {
+        document.write("Welcome Ma'am");
+    }
+    else
+    {
+        document.write("Wrong gender");
+    }
+
+
+    document.write('<br><br>');
+    //question 3
+    var signalColor=prompt('Enter Trafic Signal Color');
+    if (signalColor=='red' || signalColor=='Red' || signalColor=='RED')
+    {
+        document.write("Must Stop");
+    }
+    else if (signalColor=='yellow' || signalColor=='Yellow' || signalColor=='YELLOW')
+    {
+        document.write("Ready To Move");
+    }
+    else if (signalColor=='green' || signalColor=='Green' || signalColor=='GREEN')
+    {
+        document.write("Move Now");
+    }
+    else
+    {
+        document.write('You Enter Wrong Traffic Color');
+    }
+
+
+
+    document.write('<br><br>');
+    //question 4
+    var fuel=prompt('Enter Remaining Fuel Of Car In Litters');
+    if (fuel<0.25)
+    {
+        document.write('Please refill the fuel in your car');
+    }
+    else
+    {
+        document.write('Your Car Fuel is '+fuel+ ' Happy Journey');
+    }
+
+
+    document.write('<br><br>');
+    //question 4
+    //a part
+    var a = 4;
+    if (++a === 5){
+        alert("given condition for variable a is true");
+    }
+    //This is true condition
+
+
+    //b part
+     var b = 82;
+    if (b++ === 83){
+        alert("given condition for variable b is true");
+    }
+    //this is false
+
+
+
+    //c part
+     var c = 12;
+    if (c++ === 13){
+        alert("condition 1 is true");
+    }
+    //false
+    if (c === 13){
+        alert("condition 2 is true");
+    }
+    //true
+    if (++c < 14){
+        alert("condition 3 is true");
+    }
+    //false
+    if(c === 14){
+        alert("condition 4 is true");
+    }
+    //true
+
+    //d part
+    var materialCost = 20000;
+    var laborCost = 2000;
+    var totalCost = materialCost + laborCost;
+    if (totalCost === laborCost + materialCost){
+        alert("The cost equals");
+    }
+    //ture
+
+    //e part
+    if (true){
+        alert("True");
+    }
+    if (false){
+        alert("False");
+    }
+    //f part
+    if("car" < "cat"){
+        alert("car is smaller than cat");
+    }
+    //true
+
+    //question 5
+
+    var sub1=prompt('subject 1 marks');
+    var sub2=prompt('subject 2 marks');
+    var sub3=prompt('subject 3 marks');
+
+
+    var total=parseInt(sub1)+parseInt(sub2)+parseInt(sub3);
+    var percentage=(total/300)*100;
+    var grade,msg;
+    if (percentage>=80)
+    {
+       var grade='A-one';
+       var msg='Excelent';
+    }
+    else if(percentage>=70)
+    {
+        var grade='A';
+        var msg='Good';
+    }
+    else if (percentage>=60)
+    {
+        var grade='B';
+        var msg='You need to improve';
+    }
+    else if(percentage<60)
+    {
+        var grade='Fail';
+        var msg='Sorry';
+    }
+    
+    
+    document.write('Total Marks: 300<br>Obtain Marks: '+total+'<br>Percentage: '+percentage+'%<br>Grade: '+grade+'<br>Remarks: '+msg+'<br><br><br><br>');
+
+//question 7
+
+    var secretNumber=7;
+    var guess=prompt('Enter Secret Number');
+    if (guess==secretNumber)
+    {
+        document.write('Bingo! Correct answer');
+    }
+    else
+    {
+        document.write('Close enough to the correct answer');
+    }
+
+document.write('<br><br><br><br>');
+//question 8
+    var divisibleNumber=prompt('Enter Number To Check Divisible of 3');
+    if (divisibleNumber%3 == 0)
+    {
+        document.write('Number is divisible');
+    }
+    else
+    {
+        document.write('Number is not divisible');
+    }
+
+
+document.write('<br><br><br><br>');
+//question 9
+
+    var checkNumber=prompt('Enter number to check Even or Odd');
+    if (checkNumber%2 == 0)
+    {
+        document.write('Number is even');
+    }
+    else
+    {
+        document.write('Number is Odd');
+    }
+
+
+
+document.write('<br><br><br><br>');
+//question 10
+
+    var temperatue=prompt('Enter Temperature');
+    if (temperatue > 40)
+    {
+        document.write('It is too hot outside');
+    }
+    else if (temperatue > 30)
+    {
+        document.write('The weather today is normal');
+    }
+    else if (temperatue > 20)
+    {
+        document.write("Today's weather is cool");
+    }
+    else if (temperatue > 10)
+    {
+        document.write('OMG! Today weather is so cool');
+    }
+
+
+
+document.write('<br><br><br><br>');
+//question 11
+    var firstNumber=prompt('Enter first number');
+    var secondNumber=prompt('Enter second number');
+    var operator=prompt('Enter operator to calculate');
+
+    if (operator=='+')
+    {
+        var calculation=parseInt(firstNumber)+parseInt(secondNumber);
+        document.write('Your addition is: '+calculation);
+    }
+    else if (operator=='-')
+    {
+        var calculation=parseInt(firstNumber)-parseInt(secondNumber);
+        document.write('Your subtraction is: '+calculation);
+    }
+    else if (operator=='/')
+    {
+        var calculation=parseInt(firstNumber)/parseInt(secondNumber);
+        document.write('Your division is: '+calculation);
+    }
+    else if (operator=='%')
+    {
+        var calculation=parseInt(firstNumber)%parseInt(secretNumber);
+        document.write('Your remainder is: '+calculation);
+    }
+    else if (operator=='*')
+    {
+        var calculation=parseInt(firstNumber)*parseInt(secretNumber);
+        document.write('Your multiplication is: '+calculation);
+    }
+    else
+    {
+        document.write('Your enter wrong operator to calculate values');
+    }
+
+
+
+
+</script>
+
+
+<body>
+<h1>Chapter 9-11</h1>
+</body>
+</html>

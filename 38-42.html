@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>38-42</title>
+</head>
+<script>
+    //Write a custom function power ( a, b ), to calculate the value of a raised to b.
+
+    //Question 1
+    function foo() {
+        var a=prompt('Enter a value');
+        var b=prompt('Enter b value');
+        var result=Math.pow(a,b);
+        document.getElementById('foo').innerHTML=a+'<sup>'+b+'</sup>'+'= '+result;
+    }
+    //Question 2
+    function leap() {
+        var year=prompt('Enter year');
+        if (year%4===0)
+        {
+            document.getElementById('leap').innerHTML=year+' is leap year';
+        }
+        else
+        {
+            document.getElementById('leap').innerHTML=year+' is not leap year';
+        }
+    }
+
+    //Question 3
+    function area() {
+        var a=prompt('Enter A value');
+        var b=prompt('Enter B value');
+        var c=prompt('Enter C value');
+        var s=(a+b+c)/2;
+        var res=s*((s-a)*(s-b)*(s-c));
+        document.getElementById('area').innerHTML=res;
+    }
+    //Question 4
+    function main() {
+        var sub1=prompt('Subject 1 marks');
+        var sub2=prompt('Subject 2 marks');
+        var sub3=prompt('Subject 3 marks');
+        var totalMarks=100;
+        function avg()
+        {
+            return parseInt(parseInt(sub1)+parseInt(sub2)+parseInt(sub3))/2;
+        }
+        function perc()
+        {
+            return ((parseInt(sub1)+parseInt(sub2)+parseInt(sub3))/totalMarks)*100;
+        }
+
+        document.getElementById('main').innerHTML='Average of marks: '+avg()+'<br>Percentage of marks: '+perc()+'%';
+
+    }
+    //Question 5
+    function indexx() {
+        var str=prompt('Enter string');
+        for (var i=0;i<=str.length;i++)
+        {
+            document.getElementById('indexx').innerHTML='check console';
+            console.log(str[i]+' At index'+i);
+        }
+    }
+
+    //Question 6
+    function vowels() {
+        var string=prompt('Enter string');
+       var res= string.replace(/[aeiou]/g,'');
+
+        document.getElementById('vowels').innerHTML=res;
+    }
+
+    //Question 7
+    function findOccurrences() {
+        var str = "Pleases read this application and give me gratuity";
+        var count = 0;
+        let haveSeenVowel = false;
+        for (const letter of str.toLowerCase()) {
+            switch (letter) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                {
+                    if (haveSeenVowel) {
+                        count++;
+                        haveSeenVowel = false;
+                    } else {
+                        haveSeenVowel = true;
+                    }
+                    break;
+                }
+                default:
+                    haveSeenVowel = false
+            }
+        }
+        return count
+    }
+
+    console.log(findOccurrences());
+
+    //Question 8
+    function citiesDistance() {
+        var getDistance=prompt('Enter city distance in KM');
+        var meter=getDistance*1000;
+        var feet=getDistance*3280.84;
+        var inches=getDistance*39370.1;
+
+        document.getElementById('citiesDistance').innerHTML='Total distance KM: '+getDistance+'<br>Meters: '+meter+'<br>Feet: '+feet+'<br>Inches: '+inches;
+    }
+    
+    //Question 9
+    function overTimeSalary() {
+        var hours=prompt('Enter hours');
+        if (hours>40)
+        {
+            var overTime=hours-40;
+            document.getElementById('overTimeSalary').innerHTML='Extra Hours: '+overTime+'<br>Extra Salary: '+overTime*12;
+
+        }
+    }
+
+    //Question 10
+    function notes() {
+        var amt=prompt('Enter Amount');
+        var hundred=parseInt(amt/100);
+        var fifty=parseInt((amt % 100) / 50);
+        var ten=parseInt(((amt % 100) % 50) / 10);
+        var other=parseInt(((amt % 100) % 50) % 10);
+
+        document.getElementById('notes').innerHTML='hundred notes: '+hundred+'<br>fifty: '+fifty+'<br>ten: '+ten+'<br>Other amount: '+other;
+
+    }
+</script>
+<body>
+<h3 id="foo"></h3>
+<button onclick="foo()">click question 1</button>
+<br>
+<br>
+<h3 id="leap"></h3>
+<button onclick="leap()">Click to check leap</button>
+<br>
+<br>
+<h3 id="area"></h3>
+<button onclick="area()">Area of triangle</button>
+<br>
+<br>
+<h3 id="main"></h3>
+<button onclick="main()">Check student result</button>
+<br>
+<br>
+<h3 id="indexx"></h3>
+<button onclick="indexx()">index show</button>
+<br>
+<br>
+<h3 id="vowels"></h3>
+<button onclick="vowels()">Remove Vowels</button>
+<br>
+<br>
+<h3 id="occurence"></h3>
+<button onclick="findOccurrences()">click to check occur</button>
+<br>
+<br>
+<h3 id="citiesDistance"></h3>
+<button onclick="citiesDistance()">City distance</button>
+<br>
+<br>
+<h3 id="overTimeSalary"></h3>
+<button onclick="overTimeSalary()">Click to check</button>
+<br>
+<br>
+<h3 id="notes"></h3>
+<button onclick="notes()">Click to check notes</button>
+<h1>Chapter 38-42</h1>
+</body>
+</html>
